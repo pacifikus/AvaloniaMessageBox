@@ -32,15 +32,17 @@ namespace AvaloniaMessageBox
 		private static Task<MessageBoxResult> ShowMessageBox(string text, string caption = "", MessageBoxButton buttons = MessageBoxButton.OK, MessageBoxIcon icon = MessageBoxIcon.None)
 		{
 			var window = new MessageBoxWindow() { };
-			window.DataContext = new MessageBoxWindowViewModel(window, buttons, icon)
+			var datacontext = new MessageBoxWindowViewModel(window, buttons, icon)
 			{
 				Text = text,
 				Caption = caption,
 				MessageBoxResult = MessageBoxResult.None
 			};
-			
+
+			window.DataContext = datacontext;
+
 			var tcs = new TaskCompletionSource<MessageBoxResult>();
-			window.Closed += delegate { tcs.TrySetResult(window.MessageBoxResult); };
+			window.Closed += delegate { tcs.TrySetResult(datacontext.MessageBoxResult); };
 			window.Show();
 			return tcs.Task;
 		}

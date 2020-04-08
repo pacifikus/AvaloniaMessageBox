@@ -6,15 +6,12 @@ namespace AvaloniaMessageBox.Views
 {
 	public class MessageBoxWindow : Window
 	{
-		public MessageBoxResult MessageBoxResult { get; set; }
-
 		public MessageBoxWindow()
 		{
 			this.InitializeComponent();
-			MessageBoxResult = MessageBoxResult.None;
-#if DEBUG
+			#if DEBUG
 			this.AttachDevTools();
-#endif
+			#endif
 
 			
 		}
@@ -23,7 +20,5 @@ namespace AvaloniaMessageBox.Views
 		{
 			AvaloniaXamlLoader.Load(this);
 		}
-
-		
 	}
 }

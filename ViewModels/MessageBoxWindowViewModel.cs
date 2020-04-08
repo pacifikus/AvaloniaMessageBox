@@ -67,25 +67,25 @@ namespace AvaloniaMessageBox.ViewModels
 
 		public void OkClick()
 		{
-			_window.MessageBoxResult = MessageBoxResult.OK;
+			MessageBoxResult = MessageBoxResult.OK;
 			_window.Close();
 		}
 
 		public void YesClick()
 		{
-			_window.MessageBoxResult = MessageBoxResult.Yes;
+			MessageBoxResult = MessageBoxResult.Yes;
 			_window.Close();
 		}
 
 		public void NoClick()
 		{
-			_window.MessageBoxResult = MessageBoxResult.No;
+			MessageBoxResult = MessageBoxResult.No;
 			_window.Close();
 		}
 
 		public void CancelClick()
 		{
-			_window.MessageBoxResult = MessageBoxResult.Cancel;
+			MessageBoxResult = MessageBoxResult.Cancel;
 			_window.Close();
 		}
 	}
