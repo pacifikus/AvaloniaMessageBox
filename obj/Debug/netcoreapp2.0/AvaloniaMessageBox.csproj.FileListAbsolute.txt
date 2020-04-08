@@ -1,0 +1,9 @@
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\bin\Debug\netcoreapp2.0\AvaloniaMessageBox.deps.json
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\bin\Debug\netcoreapp2.0\AvaloniaMessageBox.dll
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\bin\Debug\netcoreapp2.0\AvaloniaMessageBox.pdb
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\obj\Debug\netcoreapp2.0\AvaloniaMessageBox.csprojAssemblyReference.cache
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\obj\Debug\netcoreapp2.0\AvaloniaMessageBox.csproj.CoreCompileInputs.cache
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\obj\Debug\netcoreapp2.0\AvaloniaMessageBox.AssemblyInfoInputs.cache
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\obj\Debug\netcoreapp2.0\AvaloniaMessageBox.AssemblyInfo.cs
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\obj\Debug\netcoreapp2.0\AvaloniaMessageBox.dll
+C:\Users\Krutizna\source\repos\AvaloniaApplication2\AvaloniaMessageBox\obj\Debug\netcoreapp2.0\AvaloniaMessageBox.pdb

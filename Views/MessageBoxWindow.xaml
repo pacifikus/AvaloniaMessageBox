@@ -1,0 +1,46 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:vm="clr-namespace:AvaloniaMessageBox.ViewModels;assembly=AvaloniaMessageBox"
+        mc:Ignorable="d" d:DesignWidth="420" d:DesignHeight="150" MinWidth="150" Height="135"
+				SizeToContent="WidthAndHeight" CanResize="False" 
+       WindowStartupLocation="CenterOwner" 
+	x:Class="AvaloniaMessageBox.Views.MessageBoxWindow"
+Icon="avares://AvaloniaMessageBox/Assets/avalonia-logo.ico"
+        Title="{Binding Caption}">
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="64*"></RowDefinition>
+			<RowDefinition Height="36*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="2*"></ColumnDefinition>
+			<ColumnDefinition Width="2*"></ColumnDefinition>
+			<ColumnDefinition Width="2*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Image Grid.Row="0"  Grid.Column="0" Height="50" Width="50" VerticalAlignment="Center"   Margin="10" Stretch="Fill" MaxHeight="50" MaxWidth="50" Source="{Binding Icon}" IsVisible="{Binding IsIconVisible}" />
+		<TextBlock Text="{Binding Text}" VerticalAlignment="Center" Grid.Column="1"
+							 TextWrapping="Wrap" Margin="10" Grid.ColumnSpan="3"></TextBlock>
+		<Grid Background="#F0F0F0" Grid.Row="1" Grid.ColumnSpan="4">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*"></ColumnDefinition>
+				<ColumnDefinition Width="2*"></ColumnDefinition>
+				<ColumnDefinition Width="115"></ColumnDefinition>
+				<ColumnDefinition Width="115"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Grid.ColumnSpan="3">
+				<Button Content="Yes" Height="30" Width="100" Margin="5" IsVisible="{Binding IsYesBtnVisible}" Command="{Binding YesClick}"></Button>
+				<Button Content="No" Height="30" Width="100" Margin="5" IsVisible="{Binding IsNoBtnVisible}" Command="{Binding NoClick}"></Button>
+				<Button Content="OK" Height="30" Width="100" Margin="5" IsVisible="{Binding IsOKBtnVisible}" Command="{Binding OkClick}"></Button>
+				<Button Content="Cancel" Height="30" Width="100" Margin="5" IsVisible="{Binding IsCancelBtnVisible}" Command="{Binding CancelClick}"></Button>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</Window>
